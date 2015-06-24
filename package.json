@@ -1,7 +1,9 @@
 {
   "name": "outfitscreens",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "angularjs-toaster": "^0.4.14"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",
