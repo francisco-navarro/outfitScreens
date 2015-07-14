@@ -1,0 +1,27 @@
+<!-- Edit Modal Window-->
+<div ng-controller="ResourcesController as resourcesController">
+  <div class="panel" style=" border-color: #dee5e7; border-radius: 2px;">
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h1 class="m-n font-thin h3 text-black">resources.title</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="spanel-default" ng-init="resourcesController.init()">
+      <div class="panel-body" ng-repeat="res in resourcesController.resources">
+        
+        <h3>{{res.name}}</h3>
+       
+        <!-- VALUES -->
+        <div ng-controller="ResourcesValueController as resourcesValueController" ng-init="resourcesValueController.init(res)">
+            
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>

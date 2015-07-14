@@ -1,0 +1,13 @@
+{
+	"totalElements": 5,
+	"elements": [
+		 {
+		 	"name": "petroleo",
+		 	"values": [1,3,4,7,4]
+		},
+		{
+			"name": "gas",
+			"values": [2,3,4,3,2]
+		}]	
+
+}

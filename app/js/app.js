@@ -20,16 +20,12 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'html/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'html/about.html',
-        controller: 'AboutCtrl'
-      })
+      .when('/resources', {
+        templateUrl: 'html/resources.html',
+        controller: 'ResourcesController'
+      })      
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/resources'
       });
   });
 
@@ -37,12 +33,12 @@ angular.module('outfitScreensApp')
   .controller('infoAppCtrl',
     function ($scope, toaster) {
 
-      $scope.init = function(){
-        console.log(toaster);       
+      $scope.init = function(){ 
+        console.log('init application');
       };
 
       $scope.info = function(){
         console.log(toaster.pop);
-        toaster.success({title: "title", body:"text1"});
+        toaster.success({title: '"title"', body:'"text1"'});
       };
   });
