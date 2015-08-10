@@ -1,0 +1,31 @@
+GET /commodities?symbol=GC,BL,C&date=5
+
+commodities: 
+	GC : ORO
+	SI : PLATA
+	HG : COBRE
+	B: Petroleo brent
+	CL: Petroleo crudo	
+	NG: Gas Natural
+dates: 
+	5: 5 minutos
+	10: 10 minutos
+	30: 30 minutos
+	1H: 1 hora
+	5H: 5 horas
+	1D: 1 dia
+	1W: 1 semana
+
+{
+    "totalElements": 1,
+    "elements": [{
+        "name": "petroleo",
+        "symbol": "CL",
+        "data": [
+        {"c": [
+            {"v": "Mushrooms"},
+            {"v": 3}
+        ]}]
+    }]
+
+}

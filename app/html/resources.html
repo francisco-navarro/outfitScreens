@@ -4,7 +4,7 @@
     <div class="bg-light lter b-b wrapper-md">
       <div class="row">
         <div class="col-sm-6 col-xs-12">
-          <h1 class="m-n font-thin h3 text-black">resources.title</h1>
+          <h1 class="m-n font-thin h3 text-black">Materias primas - Energía</h1>
         </div>
       </div>
     </div>
@@ -18,9 +18,12 @@
         <!-- VALUES -->
         <div ng-controller="ResourcesValueController as resourcesValueController" ng-init="resourcesValueController.init(res)">
             
+            <div google-chart chart="resourcesValueController.chart" style="{{resourcesValueController.chart.cssStyle}}"/>
+            </div>
         </div>
 
       </div>
+
     </div>
   </div>
 </div>

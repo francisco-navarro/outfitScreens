@@ -2,24 +2,21 @@
 
 
 angular.module('outfitScreensApp')
-  .controller('ResourcesController',[
-  	'ResourcesService',
-  	function (ResourcesService) {
+    .controller('ResourcesController', [
+        'ResourcesService',
+        function(ResourcesService) {
 
-  	var vm = this;
-  	vm.init = init;
+            var vm = this;
+            vm.init = init;
 
-  	vm.resources = [];
-  	
+            vm.resources = [];
 
-  	function init(){
-  		 console.log('ResourcesController controller iniciado');
-  		 ResourcesService.find()
-  		 	.then(function(data) {
-  		 		vm.resources = data.elements;
-  		 	});
-  	}
-	
-   
-  }
-]);
+            function init() {
+                ResourcesService.find()
+                    .then(function(data) {
+                        vm.resources = data.elements;
+                    });
+            }
+
+        }
+    ]);

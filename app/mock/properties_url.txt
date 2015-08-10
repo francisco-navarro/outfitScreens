@@ -1,0 +1,43 @@
+Remote Address:185.94.85.240:80
+
+Request Method:GET
+Status Code:200 OK
+Response Headers
+view source
+Accept-Ranges:bytes
+Access-Control-Allow-Origin:*
+Age:0
+Connection:keep-alive
+Content-Encoding:gzip
+Content-Length:1575
+Content-Type:application/json
+Date:Fri, 17 Jul 2015 15:07:21 GMT
+ETag:"1e8e-51b138b31b8be-gzip"
+Last-Modified:Fri, 17 Jul 2015 15:07:17 GMT
+Server:Apache/2.4.10 (Unix)
+Vary:Accept-Encoding,User-Agent
+Via:1.1 varnish
+X-Varnish:2525959829
+Request Headers
+view source
+Accept:application/json, text/javascript, */*; q=0.01
+Accept-Encoding:gzip, deflate, sdch
+Accept-Language:es-ES,es;q=0.8,en;q=0.6,fi;q=0.4
+Cache-Control:no-cache
+Connection:keep-alive
+Host:sbcharts.investing.com
+Origin:http://es.investing.com
+Pragma:no-cache
+Referer:http://es.investing.com/commodities/
+
+
+Request URL: http://sbcharts.investing.com/charts_xml/jschart_sideblock_8833_area.json
+petroleo brent  8833
+petroleo crudo  8849 
+cafe c 8832
+oro 8830 
+plata 8836
+cobre 8831
+soja 8916
+gas natural 8862
+aceite calefacción 8988 
