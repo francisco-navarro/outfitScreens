@@ -19,7 +19,8 @@ dates:
 {
     "totalElements": 1,
     "elements": [{
-        "name": "petroleo",
+    	"id": 2,
+        "description": "petroleo",
         "symbol": "CL",
         "data": [
         {"c": [
@@ -27,5 +28,4 @@ dates:
             {"v": 3}
         ]}]
     }]
-
 }

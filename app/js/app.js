@@ -21,12 +21,12 @@ angular
     ])
     .config(function($routeProvider) {
         $routeProvider
-            .when('/resources', {
-                templateUrl: 'html/resources.html',
-                controller: 'ResourcesController'
+            .when('/markets', {
+                templateUrl: 'html/markets.html',
+                controller: 'MarketsController'
             })
             .otherwise({
-                redirectTo: '/resources'
+                redirectTo: '/markets'
             });
     });
 

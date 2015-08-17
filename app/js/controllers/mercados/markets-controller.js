@@ -2,7 +2,7 @@
 
 
 angular.module('outfitScreensApp')
-    .controller('ResourcesController', [
+    .controller('MarketsController', [
         'ResourcesService',
         function(ResourcesService) {
 
@@ -12,10 +12,10 @@ angular.module('outfitScreensApp')
             vm.resources = [];
 
             function init() {
-                ResourcesService.find()
-                    .then(function(data) {
-                        vm.resources = data.elements;
-                    });
+                // ResourcesService.find(8830)
+                //     .then(function(data) {
+                //         vm.resources = data.elements;
+                //     });
             }
 
         }

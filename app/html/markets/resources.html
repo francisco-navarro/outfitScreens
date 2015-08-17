@@ -1,0 +1,24 @@
+<!--
+
+AGRÍCOLAS - http://es.investing.com/commodities/perecederos
+
+ENERGÍA - http://es.investing.com/commodities/energ%C3%ADas
+
+METALES  -  http://es.investing.com/commodities/metales
+
+GRANOS - http://es.investing.com/commodities/granos
+
+-->
+<div class="sections">
+    AGRÍCOLAS | ENERGÍA | METALES | GRANOS
+</div>
+<div ng-controller="MarketController as marketController">
+    <div>
+        METALES
+    </div>
+    <div class="spanel-default" ng-init="resourcesController.init()">
+        <div ng-controller="ResourcesValueController as resourcesValueController" ng-init="resourcesValueController.init()">
+            <div google-chart chart="resourcesValueController.chart" style="{{resourcesValueController.chart.cssStyle}}" />
+        </div>
+    </div>
+</div>

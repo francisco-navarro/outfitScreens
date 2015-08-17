@@ -21,14 +21,14 @@
     <div ng-controller="MenuController as menuController" ng-init="menuController.init()" class="toolbar" ng-include src="'html/toolbar.html'">
     </div>
 
-     <div ng-controller="infoAppCtrl" ng-init="init()" class="app-header-fixed">
+    <div ng-controller="infoAppCtrl" ng-init="init()" class="app-header-fixed">
     </div>
-
-   
 
     <div class="container">
         <div ng-view=""></div>
     </div>
+
+    <div ng-include src="'html/footer.html'"></div>
    
 
      <toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-right-center'}"></toaster-container>
@@ -54,9 +54,9 @@
         <script src="js/controllers/main.js"></script>
         <script src="js/controllers/about.js"></script>
         <script src="js/controllers/toolbar/menu-controller.js"></script>
-        <script src="js/controllers/resources/resources-controller.js"></script>
-        <script src="js/controllers/resources/resources-value-controller.js"></script>
-        <script src="js/controllers/resources/resources-service.js"></script>
+        <script src="js/controllers/mercados/resources-controller.js"></script>
+        <script src="js/controllers/mercados/resources-value-controller.js"></script>
+        <script src="js/controllers/mercados/resources-service.js"></script>
         <!-- endbuild -->
 </body>
 </html>
