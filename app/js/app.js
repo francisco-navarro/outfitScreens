@@ -22,8 +22,12 @@ angular
     .config(function($routeProvider) {
         $routeProvider
             .when('/markets', {
-                templateUrl: 'html/markets.html',
-                controller: 'MarketsController'
+                templateUrl: 'html/markets/markets.html',
+                controller: 'MarketsMasterController'
+            })
+            .when('/stock-exchange', {
+                templateUrl: 'html/stock-exchange/stock-exchange.html',
+                controller: 'StockExchangeController'
             })
             .otherwise({
                 redirectTo: '/markets'

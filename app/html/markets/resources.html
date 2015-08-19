@@ -9,10 +9,14 @@ METALES  -  http://es.investing.com/commodities/metales
 GRANOS - http://es.investing.com/commodities/granos
 
 -->
-<div class="sections">
-    AGRÍCOLAS | ENERGÍA | METALES | GRANOS
-</div>
-<div ng-controller="MarketController as marketController">
+
+TABLA RESUMEN {{marketsMasterController.marketSelected}}
+
+Si se pulsa uno, se muestra este gráfico
+<!--div ng-controller="ResourcesValueController as resourcesValueController" ng-init="resourcesValueController.init()">
+    <div google-chart chart="resourcesValueController.chart" style="{{resourcesValueController.chart.cssStyle}}" />
+</div-->
+<!--div ng-controller="MarketController as marketController">
     <div>
         METALES
     </div>
@@ -21,4 +25,4 @@ GRANOS - http://es.investing.com/commodities/granos
             <div google-chart chart="resourcesValueController.chart" style="{{resourcesValueController.chart.cssStyle}}" />
         </div>
     </div>
-</div>
+</div-->

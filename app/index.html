@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="outfitScreensApp">
 
+  <body ng-app="outfitScreensApp">
 
     <div ng-controller="MenuController as menuController" ng-init="menuController.init()" class="toolbar" ng-include src="'html/toolbar.html'">
     </div>
@@ -54,9 +54,12 @@
         <script src="js/controllers/main.js"></script>
         <script src="js/controllers/about.js"></script>
         <script src="js/controllers/toolbar/menu-controller.js"></script>
-        <script src="js/controllers/mercados/resources-controller.js"></script>
-        <script src="js/controllers/mercados/resources-value-controller.js"></script>
-        <script src="js/controllers/mercados/resources-service.js"></script>
+        <script src="js/controllers/markets/markets-master-controller.js"></script>
+        <script src="js/controllers/markets/services/markets-service.js"></script>
+        <script src="js/controllers/markets/resources-controller.js"></script>
+        <script src="js/controllers/markets/resources-chart-controller.js"></script>
+        <script src="js/controllers/markets/services/resources-service.js"></script>
+        <script src="js/controllers/stock-exchange/stock-exchange.js"></script>
         <!-- endbuild -->
 </body>
 </html>

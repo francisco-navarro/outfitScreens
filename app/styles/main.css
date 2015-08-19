@@ -26,6 +26,7 @@ a {
 ul {
     padding-right: 0px;
     -webkit-padding-start: 0px;
+    margin: 5px;
 }
 li {
     display: inline;
@@ -34,11 +35,21 @@ li {
     cursor: pointer;
 }
 
+.center {
+    margin: auto;
+    padding: 5px;
+}
+
 /* Estilos cabecera `*/
 .toolbar {
     background: #222;
-    padding-top: 10px;
-    padding-left: 40px;
+    padding-top: 10px;    
+    border-bottom: 1px solid #00ada9;
+    color: #fff;
+}
+.toolbar .center{
+    margin: auto;
+    width: 950px;
 }
 .toolbar a {
     color: #ccc;
@@ -46,29 +57,31 @@ li {
 .toolbar .head1 {
     font-family: Verdana;
     font-size: 9px;
+    padding-bottom: 1px;
 }
 .toolbar .headTitle{
     font-family: Arial;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 26px;
     color: #fff;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-left: 35px;
+    background: no-repeat ;
+    background-image: url("/../images/logo.png");
 }
 .toolbar .sections{
     font-size: 14px;
     color: #fff; 
     font-weight: normal;   
+    padding-bottom: 5px;
 }
 
-.toolbar .subSections{
-    margin-bottom: 10px;
-}
 /* end estilos cabeceras */
 
 .container{
-    min-height: 350px;
+    min-height: 380px;
     height: auto !important;
+    margin: auto;
+    width: 950px;
 }
 
 .footer{
