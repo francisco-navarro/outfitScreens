@@ -16,6 +16,7 @@ angular.module('outfitScreensApp')
                             resolve(data);
                         });
                 });
+
             }
 
             return {

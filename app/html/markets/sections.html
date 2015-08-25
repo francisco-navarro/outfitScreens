@@ -1,0 +1,18 @@
+
+<div ng-controller="SectionsMasterController as sectionsMasterController" ng-init="sectionsMasterController.init(1)">
+	<div class="subSections">
+	    <ul>
+	        <li ng-repeat="section in sectionsMasterController.sections" ng-click="sectionsMasterController.select(section)">
+	        {{section.description}}
+	        </li>        
+	    </ul>
+	    
+	</div>
+
+	<div ng-include src="'html/markets/resources.html'" 
+		ng-show="sectionsMasterController.selected != undefined"
+		ng-controller="ResourcesController as resourcesController" 
+		ng-init="resourcesController.init()">
+	</div>
+
+</div>

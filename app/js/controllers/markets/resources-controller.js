@@ -3,20 +3,28 @@
 
 angular.module('outfitScreensApp')
     .controller('ResourcesController', [
+        '$rootScope',
         'ResourcesService',
-        function(ResourcesService) {
+        function($rootScope, ResourcesService) {
 
             var vm = this;
             vm.init = init;
 
-            function init(marketSelected) {
+            function init() {
                 vm.resources = [];
-                vm.marketSelected = marketSelected;
-                // ResourcesService.find(8830)
-                //     .then(function(data) {
-                //         vm.resources = data.elements;
-                //     });
             }
+
+            function findResources(id) {
+                ResourcesService.find(id)
+                    .then(function(data) {
+                        vm.resources = data.elements;
+                    });
+            }
+
+            $rootScope.$on('subsectionSelected', function(event, selected) {
+                vm.subsectionSelected = selected;   
+                        
+            });
 
         }
     ]);
