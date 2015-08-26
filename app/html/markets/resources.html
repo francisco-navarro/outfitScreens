@@ -1,32 +1,45 @@
-<!--
+<!-- resourcesController -->
 
-AGRÍCOLAS - http://es.investing.com/commodities/perecederos
-
-ENERGÍA - http://es.investing.com/commodities/energ%C3%ADas
-
-METALES  -  http://es.investing.com/commodities/metales
-
-GRANOS - http://es.investing.com/commodities/granos
-
--->
-
-{{resourcesController.subsectionSelected}}
-
-TABLA RESUMEN <!-- TODO servicio -->
+<div ng-show="resourcesController.resources.length" 
+ ng-controller="ResourcesChartController as chartController" ng-init="chartController.init()" >
 
 
 
-Si se pulsa uno, se muestra este gráfico
-<!--div ng-controller="ResourcesValueController as resourcesValueController" ng-init="resourcesValueController.init()">
-    <div google-chart chart="resourcesValueController.chart" style="{{resourcesValueController.chart.cssStyle}}" />
-</div-->
-<!--div ng-controller="MarketController as marketController">
-    <div>
-        METALES
+    <table id="dailyTab" >
+        <thead>
+            <tr>
+                <th class="icon">&nbsp;</th>
+                <th class="left pointer">{{resourcesController.table.description}}<span class="headerSortDefault newSiteIconsSprite" sort_default=""></span> </th>
+                <th class="pointer">15 minutos</th>
+                <th class="pointer">1 hora</th>
+                <th class="pointer">Diario</th>
+                <th class="pointer">Semanal</th>
+                <th class="pointer">Mensual</th>
+                <th class="pointer">Anual</th>
+                <th class="pointer">3 años</th>
+            </tr>
+        </thead>
+        <tbody>    
+            <tr ng-repeat="resource in resourcesController.resources" ng-click="chartController.load(resource)">
+                <td class="flag"><span title="Estados Unidos" class="ceFlags USA">&nbsp;</span></td>
+                <td class="flag">
+                    <nobr>{{resource.name}}</nobr>
+                </td>
+                <td >0,00%</td>
+                <td >0,35%</td>
+                <td >0,28%</td>
+                <td >-3,64%</td>
+                <td >-0,77%</td>
+                <td >6,61%</td>
+                <td >-13,63%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="hidden"     
+        when-visible="chartController.animateElementIn"
+        when-not-visible="chartController.animateElementOut">
+        <div google-chart chart="chartController.chart" style="{{chartController.chart.cssStyle}}" />
     </div>
-    <div class="spanel-default" ng-init="resourcesController.init()">
-        <div ng-controller="ResourcesValueController as resourcesValueController" ng-init="resourcesValueController.init()">
-            <div google-chart chart="resourcesValueController.chart" style="{{resourcesValueController.chart.cssStyle}}" />
-        </div>
-    </div>
-</div-->
+
+</div>

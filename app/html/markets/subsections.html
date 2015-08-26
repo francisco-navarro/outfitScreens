@@ -1,0 +1,15 @@
+<div class="subsection">
+    <ul>
+        <!--li>{{sectionsMaster.selected.description}}</li-->
+        <li ng-repeat="item in subSectionsController.subSections" ng-click="subSectionsController.selectTable(item)">
+            {{item.description}}
+        </li>
+    </ul>
+
+    <div ng-include src="'html/markets/resources.html'"       
+        ng-controller="ResourcesController as resourcesController" 
+        ng-init="resourcesController.init(sectionsMaster)"
+        class="resourcesController">
+    </div>
+
+</div>

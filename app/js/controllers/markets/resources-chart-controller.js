@@ -2,7 +2,7 @@
 
 
 angular.module('outfitScreensApp')
-    .controller('ResourcesValueController', [
+    .controller('ResourcesChartController', [
         function() {
 
             var vm = this;
@@ -28,7 +28,7 @@ angular.module('outfitScreensApp')
 		        },
 			    hAxis: {
 			        format: 'M/d/yy hh:mm',
-			        title: 'fecha',
+			        title: '',
 			        viewWindow: {
 			          //  min: new Date(1436809522000),
 			           // max:  new Date(1436966400000)
@@ -44,14 +44,29 @@ angular.module('outfitScreensApp')
 			};
 
             vm.init = init;
+            vm.load = load;
+            vm.animateElementIn = animateElementIn;
+            vm.animateElementOut = animateElementOut;
 
-            function init(resource) {                
+            function init(){}
+
+            function load(resource) { 
+            	console.log(resource);
                 chart1.data.rows = resource.data;
                 chart1.data.cols[1].label = 'petroleo';
                 vm.chart = chart1;
             }
 
-            
+            function animateElementIn($el) {
+                $el.removeClass('hidden');
+                $el.addClass('animated fadeInUp');
+            }
+
+            function animateElementOut($el) {
+                $el.addClass('hidden');
+                $el.removeClass('animated fadeInUp');
+            }
+
 
         }
     ]);

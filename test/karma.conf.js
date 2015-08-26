@@ -33,6 +33,7 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angularjs-toaster/toaster.js',
       'bower_components/angular-google-chart/ng-google-chart.js',
+      'bower_components/angular-scroll-animate/dist/angular-scroll-animate.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

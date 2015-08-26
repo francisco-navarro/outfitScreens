@@ -9,21 +9,25 @@ angular.module('outfitScreensApp')
 
             var vm = this;
             vm.init = init;
+            vm.findResource = findResource;
 
             function init() {
                 vm.resources = [];
             }
 
-            function findResources(id) {
-                ResourcesService.find(id)
+            function findResource(elem) {
+                ResourcesService.find(elem)
                     .then(function(data) {
-                        vm.resources = data.elements;
+                        if (data.elements[0].name) {
+                            vm.resources.push(data.elements[0]);
+                        }
                     });
             }
 
-            $rootScope.$on('subsectionSelected', function(event, selected) {
-                vm.subsectionSelected = selected;   
-                        
+            $rootScope.$on('tableSelected', function(event, table) {
+                vm.resources = [];
+                vm.table = table;
+                table.resources.forEach(findResource);
             });
 
         }

@@ -17,7 +17,8 @@ angular
         'ngSanitize',
         'ngTouch',
         'toaster',
-        'googlechart'
+        'googlechart',
+        'angular-scroll-animate'
     ])
     .config(function($routeProvider) {
         $routeProvider

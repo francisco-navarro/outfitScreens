@@ -19,15 +19,12 @@ angular.module('outfitScreensApp')
                     .then(function(data) {
                         vm.sections = data;
                     });
-
             }
 
             function select(value) {
                 vm.selected = value;
-                $rootScope.$emit('subsectionSelected', value);
+                $rootScope.$emit('sectionSelected', value);
             }
-
-
 
         }
     ]);

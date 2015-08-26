@@ -23,11 +23,13 @@ a {
 
 
 /*Estilo para listas horizontales */
+
 ul {
     padding-right: 0px;
     -webkit-padding-start: 0px;
     margin: 5px;
 }
+
 li {
     display: inline;
     list-style-type: none;
@@ -40,55 +42,117 @@ li {
     padding: 5px;
 }
 
+
 /* Estilos cabecera `*/
+
 .toolbar {
     background: #222;
-    padding-top: 10px;    
+    padding-top: 10px;
     border-bottom: 1px solid #00ada9;
     color: #fff;
 }
-.toolbar .center{
+
+.toolbar .center {
     margin: auto;
     width: 950px;
 }
+
 .toolbar a {
     color: #ccc;
 }
+
 .toolbar .head1 {
     font-family: Verdana;
     font-size: 9px;
     padding-bottom: 1px;
 }
-.toolbar .headTitle{
+
+.toolbar .headTitle {
     font-family: Arial;
     font-weight: bold;
     font-size: 26px;
     color: #fff;
     padding-left: 35px;
-    background: no-repeat ;
+    background: no-repeat;
     background-image: url("/../images/logo.png");
 }
-.toolbar .sections{
+
+.toolbar .sections {
     font-size: 14px;
-    color: #fff; 
-    font-weight: normal;   
+    color: #fff;
+    font-weight: normal;
     padding-bottom: 5px;
 }
 
+
 /* end estilos cabeceras */
 
-.container{
+.container {
     min-height: 380px;
     height: auto !important;
     margin: auto;
     width: 950px;
 }
 
-.footer{
+.footer {
     margin-top: 100px;
     background: #222;
     color: #ccc;
     font-family: Verdana;
     font-size: 9px;
     padding-left: 40px;
+}
+
+.subsection {
+    margin-top: 20px;
+}
+
+.subsection ul {
+    border-top: 1px solid #5F7A87;
+    padding: 5px;
+}
+
+.subsection li {
+    border-left: 1px solid #5F7A87;
+    padding-left: 15px;
+}
+
+.subsection li:first-child {
+    border-left: 0px solid #5F7A87;
+    padding-left: 0px;
+}
+
+.resourcesController {
+    padding: 5px;
+}
+
+#dailyTab {
+    margin-top: 20px;
+    border: 1px dotted #293B47;
+    width: 800px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+#dailyTab td,
+th {
+    padding: 5px;
+}
+
+#dailyTab td {
+    text-align: left;
+    border-bottom: 1px dotted #293B47;
+}
+
+#dailyTab th {
+    border-bottom: 1px solid #293B47;
+}
+
+#dailyTab .flag:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.hidden {
+    visibility: hidden;
 }
