@@ -1,9 +1,11 @@
 <!-- resourcesController -->
 
 <div ng-show="resourcesController.resources.length" 
- ng-controller="ResourcesChartController as chartController" ng-init="chartController.init()" >
+ ng-controller="ResourcesChartController as chartController" ng-init="chartController.init()">
 
-
+    <div   ng-show="chartController.chart.data.rows.length > 5" class="animate-hide">
+        <div google-chart chart="chartController.chart" style="{{chartController.chart.cssStyle}}" />
+    </div>
 
     <table id="dailyTab" >
         <thead>
@@ -36,10 +38,6 @@
         </tbody>
     </table>
 
-    <div class="hidden"     
-        when-visible="chartController.animateElementIn"
-        when-not-visible="chartController.animateElementOut">
-        <div google-chart chart="chartController.chart" style="{{chartController.chart.cssStyle}}" />
-    </div>
+
 
 </div>

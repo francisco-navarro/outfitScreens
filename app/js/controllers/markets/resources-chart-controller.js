@@ -51,10 +51,10 @@ angular.module('outfitScreensApp')
             function init(){}
 
             function load(resource) { 
-            	console.log(resource);
                 chart1.data.rows = resource.data;
                 chart1.data.cols[1].label = 'petroleo';
                 vm.chart = chart1;
+                vm.resource =  resource;
             }
 
             function animateElementIn($el) {
