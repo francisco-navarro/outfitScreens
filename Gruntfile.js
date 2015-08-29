@@ -267,9 +267,9 @@ module.exports = function (grunt) {
     //     }
     //   }
     // },
-    // concat: {
-    //   dist: {}
-    // },
+    concat: {
+      dist: {}
+    },
 
     imagemin: {
       dist: {
