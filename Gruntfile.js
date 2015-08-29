@@ -435,7 +435,7 @@ module.exports = function (grunt) {
     //'cssmin',
     //'uglify',
     //'filerev',//rename files for cache purpouses
-    'usemin'
+    //'usemin'
     //,'htmlmin'
   ]);
 
