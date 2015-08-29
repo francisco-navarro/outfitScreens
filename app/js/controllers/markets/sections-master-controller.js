@@ -14,6 +14,7 @@ angular.module('outfitScreensApp')
             vm.sections = [];
 
             function init(id) {
+                console.log(SectionsService);
                 vm.selected = undefined;
                 SectionsService.list(id)
                     .then(function(data) {
