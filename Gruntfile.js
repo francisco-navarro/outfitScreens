@@ -425,9 +425,9 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
-    'useminPrepare',
+    //'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
+    //'autoprefixer',
     'concat',
     'ngAnnotate',
     'copy:dist',
