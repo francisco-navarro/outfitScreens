@@ -222,8 +222,8 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'],
-              css: ['cssmin']
+            //  js: ['concat', 'uglifyjs'],
+            //  css: ['cssmin']
             },
             post: {}
           }
@@ -238,9 +238,9 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
-          '<%= yeoman.dist %>/images',
-          '<%= yeoman.dist %>/styles',
-          '<%= yeoman.dist %>/html'
+        //  '<%= yeoman.dist %>/images',
+        //  '<%= yeoman.dist %>/styles',
+        //  '<%= yeoman.dist %>/html'
         ]
       }
     },
