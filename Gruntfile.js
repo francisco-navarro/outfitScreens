@@ -336,7 +336,7 @@ module.exports = function (grunt) {
             files: [{
                 expand: true,
                 cwd: 'app/js/',
-                src: '*constants*.js',
+                src: 'constants.js',
                 dest: 'dist/js/'
             }],
             options: {
