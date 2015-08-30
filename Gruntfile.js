@@ -35,7 +35,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all'],
+        tasks: ['newer:jshint:all','grunt-string-replace'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
@@ -331,6 +331,24 @@ module.exports = function (grunt) {
       }
     },
 
+    'string-replace': {
+        dist: {
+            files: [{
+                expand: true,
+                cwd: 'app/js/',
+                src: '*constants*.js',
+                dest: 'dist/js/'
+            }],
+            options: {
+                replacements: [{
+                    pattern: 'http:\/\/localhost:8080\/commodities\/',
+                    replacement: '/commodities/'
+                }]
+            }
+        }
+    },
+
+
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -345,8 +363,9 @@ module.exports = function (grunt) {
             '*.html',
             'html/{,*/}*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
-            'js/**/*.js', 
+            'images/**/*',
+            'js/controllers/**/*.js', 
+            'js/app.js', 
             'styles/**/*.css',                 
             'styles/fonts/{,*/}*.*'
           ]
@@ -369,6 +388,8 @@ module.exports = function (grunt) {
         src: '{,*/}*.css'
       }
     },
+
+
 
     // Run some tasks in parallel to speed up the build process
     concurrent: {
@@ -424,6 +445,7 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
+
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
@@ -434,6 +456,7 @@ module.exports = function (grunt) {
     'ngAnnotate',
     'copy:dist',
     'cdnify',
+    'string-replace',
     //'cssmin',
     //'uglify',
     //'filerev',//rename files for cache purpouses
