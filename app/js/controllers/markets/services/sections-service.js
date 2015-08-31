@@ -5,9 +5,10 @@ angular.module('outfitScreensApp')
         '$q',
         '$http',
         '$timeout',
-        function($q, $http, $timeout) {
+        'APP_CONSTANTS',
+        function($q, $http, $timeout, APP_CONSTANTS) {
 
-            var host = 'http://localhost:8080/commodities';
+            var host = APP_CONSTANTS.ENDPOINT;
             var urlSections = '/sections/';
             var idMarket = 1;
 
