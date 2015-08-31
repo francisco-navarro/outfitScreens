@@ -342,7 +342,7 @@ module.exports = function (grunt) {
             options: {
                 replacements: [{
                     pattern: 'http:\/\/localhost:8080\/commodities\/',
-                    replacement: '/commodities/'
+                    replacement: 'commodities/'
                 }]
             }
         }

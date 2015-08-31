@@ -3,18 +3,16 @@
 
 angular.module('outfitScreensApp')
     .controller('ResourcesChartController', [
-        function() {
+    	'$rootScope', 
+    	'$timeout',
+        function($rootScope,$timeout) {
 
             var vm = this;
             
             var chart1 = {};
 		    chart1.type = 'AreaChart';
-		    chart1.cssStyle = 'height:200px; width:400px;';
-		    chart1.data = {'cols': [
-		        {id: 'date', label: 'Date', type: 'date'},
-		        {id: 'value', type: 'number'},
-		        {type: 'string', role: 'tooltip'}
-		    ], 'rows': []};
+		    chart1.cssStyle = 'height:400px; width:900px;';
+		    
 
 		    chart1.options = {
 			    //title: 'Values per month',			    
@@ -48,13 +46,19 @@ angular.module('outfitScreensApp')
             vm.animateElementIn = animateElementIn;
             vm.animateElementOut = animateElementOut;
 
-            function init(){}
+            function init(){
+            	chart1.data = {'cols': [
+			        {id: 'date', label: 'Date', type: 'date'},
+			        {id: 'value', type: 'number'},
+			        {type: 'string', role: 'tooltip'}
+		    	], 'rows': []};
+            }
 
-            function load(resource) { 
-                chart1.data.rows = resource.data;
+            function load(resource) {                
                 chart1.data.cols[1].label = 'petroleo';
                 vm.chart = chart1;
                 vm.resource =  resource;
+                chart1.data.rows = resource.data;
             }
 
             function animateElementIn($el) {
@@ -66,6 +70,10 @@ angular.module('outfitScreensApp')
                 $el.addClass('hidden');
                 $el.removeClass('animated fadeInUp');
             }
+
+            $rootScope.$on('tableSelected', function() {
+            	init();
+            });
 
 
         }

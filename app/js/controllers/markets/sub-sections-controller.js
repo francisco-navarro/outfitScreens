@@ -22,6 +22,7 @@ angular.module('outfitScreensApp')
             }
 
             $rootScope.$on('sectionSelected', function(event, section) {
+                vm.subSections = [];
                 SectionsService.list(section.id)
                     .then(function(subSections) {
                         vm.subSections = subSections;
