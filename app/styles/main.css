@@ -96,7 +96,7 @@ li {
     color: #fff;
     padding-left: 35px;
     background: no-repeat;
-    background-image: url("/../images/logo.png");
+    background-image: url("../images/logo.png");
 }
 
 .toolbar .sections {
