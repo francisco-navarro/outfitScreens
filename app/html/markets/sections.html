@@ -1,14 +1,18 @@
 
 <div ng-controller="SectionsMasterController as sectionsMaster" ng-init="sectionsMaster.init(1)">
-	<div class="subSections">
-	    <ul>
-	        <li ng-repeat="section in sectionsMaster.sections" ng-click="sectionsMaster.select(section)">
-	        {{section.description}}
-	        </li>        
-	    </ul>	    
+	<div class="subsection" ng-show="sectionsMaster.selected === undefined">
+		<div class="menu">
+		    <ul>
+		        <li ng-repeat="section in sectionsMaster.sections" ng-click="sectionsMaster.select(section)">
+		        {{section.description}}
+		        </li>        
+		    </ul>
+	    </div>	    
 	</div>
 
-	<div ng-include src="'html/markets/subsections.html'" 		
+
+	<div ng-include src="'html/markets/subsections.html'" 	
+		ng-show="sectionsMaster.selected !== undefined"	
 		ng-controller="SubSectionsController as subSectionsController" 
 		ng-init="subSectionsController.init(sectionsMaster)">
 	</div>

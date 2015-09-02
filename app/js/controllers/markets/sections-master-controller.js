@@ -10,6 +10,7 @@ angular.module('outfitScreensApp')
             var vm = this;
             vm.init = init;
             vm.select = select;
+            vm.unselect = unselect;
 
             vm.sections = [];
 
@@ -25,6 +26,10 @@ angular.module('outfitScreensApp')
             function select(value) {
                 vm.selected = value;
                 $rootScope.$emit('sectionSelected', value);
+            }
+
+            function unselect() {
+                vm.selected = value;                
             }
 
         }
