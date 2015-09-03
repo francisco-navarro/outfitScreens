@@ -39,7 +39,7 @@ li {
 
 @font-face {
     font-family: circleFont;
-    src: url('http://5.39.89.107/rates/styles/fonts/circular_bold.ttf');
+    src: url('fonts/circular_bold.woff');
 }
 
 .center {
@@ -193,6 +193,7 @@ li {
 .subsection li {
     border-right: 1px solid #5F7A87;
     padding-left: 15px;
+    padding-bottom: 5px;
 }
 
 .subsection li:first-child {
