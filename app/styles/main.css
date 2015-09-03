@@ -39,7 +39,7 @@ li {
 
 @font-face {
     font-family: circleFont;
-    src: url('fonts/circular_bold.woff');
+    src: url('http://rizonapp.co/assets/fonts/din-regular.woff');
 }
 
 .center {
@@ -53,6 +53,27 @@ li {
 
 .left {
     float: left;
+}
+
+.intro {
+    font-family: circleFont;
+    font-size: 3rem;
+    background-image: url('../images/compass.jpg');
+    min-height: 480px;
+    height: auto !important;
+    margin: auto;
+    width: 1000px;
+}
+
+.intro span {
+    position: relative;
+    top: 380px;
+    /*background-color: #000;*/
+    color: #000;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    margin-top: 30px;
 }
 
 
@@ -85,7 +106,7 @@ li {
 /* Estilos cabecera `*/
 
 .toolbar {
-    background: #1c1c1c;
+    background: #1a1a1a;
     padding-top: 10px;
     border-top: 5px solid #737373;
     color: #fff;
@@ -107,14 +128,26 @@ li {
 }
 
 .headTitle {
-    font-family: Verdana;
-    font-weight: bold;
-    font-size: 26px;
+    font-family: circleFont, 'Circular Bold', Arial;
+    font-weight: 500;
+    font-size: 2rem;
     color: #fff;
     padding-left: 40px;
     background: no-repeat;
     background-image: url("../images/logo.png");
+    background-position: left center;
+    text-transform: uppercase;
     float: left;
+    margin-top: 5px;
+}
+
+.headTitle a {
+    color: #fff;
+}
+
+.headTitle a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .sections {
@@ -125,11 +158,11 @@ li {
 .sections .menu {
     border-left: 1px solid #737373;
     min-width: 120px;
-    font-size: 14px;
+    font-size: 1rem;
     color: #fff;
     font-weight: normal;
-    font-family: 'Circular Bold', Arial;
-    font-weight: 600;
+    font-family: circleFont, 'Circular Bold', Arial;
+    font-weight: 500;
     padding-top: 15px;
     padding-left: 10px;
 }
@@ -151,19 +184,25 @@ li {
 /* end estilos cabeceras */
 
 .container {
-    min-height: 380px;
+    min-height: 480px;
     height: auto !important;
     margin: auto;
     width: 950px;
 }
 
 .footer {
-    margin-top: 100px;
-    background: #222;
+    background: #1a1a1a;
     color: #ccc;
     font-family: Verdana;
     font-size: 9px;
     padding-left: 40px;
+    padding-top: 10px;
+}
+
+.footer div {
+    height: auto !important;
+    margin: auto;
+    width: 950px;
 }
 
 .subsection {
@@ -178,12 +217,10 @@ li {
     width: 950px;
 }
 
-.subsection .menu .selected{
-   
-}
+.subsection .menu .selected {}
 
-.subsection .menu .selected::after { 
-    content:  "    ►";
+.subsection .menu .selected::after {
+    content: "    ▼";
 }
 
 .subsection ul {
@@ -196,9 +233,8 @@ li {
     padding-bottom: 5px;
 }
 
-.subsection li:first-child {
+.subsection li:last-child {
     border-right: 0px solid #5F7A87;
-    padding-left: 0px;
 }
 
 .resourcesController {
@@ -234,4 +270,20 @@ th {
 
 .hidden {
     visibility: hidden;
+}
+
+.desplegable {
+    position: fixed;
+    z-index: 2;
+    margin: auto;
+    background: #325459;
+}
+
+.desplegable div {
+    border: 1px solid #5F7A87;
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
 }

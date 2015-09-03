@@ -10,6 +10,10 @@
 	    </div>	    
 	</div>
 
+	<div ng-show="sectionsMaster.selected === undefined" class="intro">
+		<span>Consultas en tiempo real</span>
+	</div>	
+
 
 	<div ng-include src="'html/markets/subsections.html'" 	
 		ng-show="sectionsMaster.selected !== undefined"	

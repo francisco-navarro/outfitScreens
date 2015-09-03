@@ -1,17 +1,21 @@
-<div class="subsection" >
+<div class="subsection">
     <div class="menu">
-        <ul>
-            <li class="selected" ng-click="sectionsMaster.unselect()">{{sectionsMaster.selected.description}}&nbsp;</li>
-            <li ng-repeat="item in subSectionsController.subSections" ng-click="subSectionsController.selectTable(item)">
-                {{item.description}}
-            </li>
-        </ul>
-    </div>
+        <div>
+            <ul>
+                <li class="selected" ng-click="sectionsMaster.unselect()" id="selectedMenu">{{sectionsMaster.selected.description}}&nbsp;</li>
+                <li ng-repeat="item in subSectionsController.subSections" ng-click="subSectionsController.selectTable(item)">
+                    {{item.description}}
+                </li>
+            </ul>
+        </div>
+    </div>    
 </div>
 
-<div ng-include src="'html/markets/resources.html'"       
-    ng-controller="ResourcesController as resourcesController" 
-    ng-init="resourcesController.init(sectionsMaster)"
-    class="resourcesController container">
-</div>
+<div class="desplegable">
+        <div ng-repeat="desplegable in sectionsMaster.sections">
+            {{desplegable.description}}
+        </div>
+</div>  
 
+<div ng-include src="'html/markets/resources.html'" ng-controller="ResourcesController as resourcesController" ng-init="resourcesController.init(sectionsMaster)" class="resourcesController container">
+</div>
