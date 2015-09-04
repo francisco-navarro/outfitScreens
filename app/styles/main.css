@@ -58,7 +58,7 @@ li {
 .intro {
     font-family: circleFont;
     font-size: 3rem;
-    background-image: url('../images/compass.jpg');
+    /*background-image: url('../images/compass.jpg');*/
     min-height: 480px;
     height: auto !important;
     margin: auto;
